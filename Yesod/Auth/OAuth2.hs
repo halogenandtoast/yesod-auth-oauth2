@@ -132,7 +132,7 @@ authOAuth2Widget widget name oauth getCreds = AuthPlugin name dispatch login
 --
 fromProfileURL :: FromJSON a
                => Text           -- ^ Plugin name
-               -> URI            -- ^ Profile URI
+               -> ByteString            -- ^ Profile URI
                -> (a -> Creds m) -- ^ Conversion to Creds
                -> Manager -> AccessToken -> IO (Creds m)
 fromProfileURL name url toCreds manager token = do
